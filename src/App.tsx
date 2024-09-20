@@ -38,17 +38,12 @@ function App() {
     }
   }, 400);
 
-  let isDebuggerOpen = false;
-
   function checkDebuggeer() {
     const start = performance.now();
     debugger;
     const end = performance.now();
     if (end - start > 100) {
-      isDebuggerOpen = true;
       onDebuggerOpen();
-    } else {
-      isDebuggerOpen = false;
     }
 
     function onDebuggerOpen() {
