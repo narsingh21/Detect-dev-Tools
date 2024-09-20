@@ -16,7 +16,7 @@ function App() {
     if (devtoolsOpen()) {
       window.location.href = "https://www.google.co.in/";
     }
-  }, 1000);
+  }, 400);
 
   const isResponsiveModeOpen = () => {
     const userAgent = navigator.userAgent;
@@ -36,7 +36,7 @@ function App() {
     if (isResponsiveModeOpen()) {
       window.location.href = "https://www.google.co.in/";
     }
-  }, 1000);
+  }, 400);
 
   return (
     <div
