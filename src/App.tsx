@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./App.css";
 
 function App() {
@@ -37,6 +37,26 @@ function App() {
       window.location.href = "https://www.google.co.in/";
     }
   }, 400);
+
+  let isDebuggerOpen = false;
+
+  function checkDebuggeer() {
+    const start = performance.now();
+    debugger;
+    const end = performance.now();
+    if (end - start > 100) {
+      isDebuggerOpen = true;
+      onDebuggerOpen();
+    } else {
+      isDebuggerOpen = false;
+    }
+
+    function onDebuggerOpen() {
+      window.location.href = "https://www.google.co.in/";
+    }
+  }
+
+  setInterval(checkDebuggeer, 100);
 
   return (
     <div
