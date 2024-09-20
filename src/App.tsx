@@ -63,7 +63,9 @@ function App() {
       ref={rootRef}
       className="flex justify-center flex-col items-center relative h-screen"
     >
-      <p className="text-gray-900 text-6xl  font-black">Welcome to AU BANK</p>
+      <p className="text-gray-900 text-6xl  font-black">
+        Welcome to AU BANK V@
+      </p>
       <p className="text-gray-900 text-6xl font-black">
         <span className="text-red-900 text-8xl font-black">
           {" "}
